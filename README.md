@@ -1,2 +1,2 @@
-# kit-software-engineering
-Inhaltliche Zusammenfassung für den Kurs Softwaretechnik 1.
+# Softwaretechnik I
+Inhaltliche Zusammenfassung für den Kurs Softwaretechnik I.
