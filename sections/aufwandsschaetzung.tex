@@ -1,0 +1,38 @@
+\section{Aufwandsschätzung}
+	
+\subsection{Schätzmethoden}
+		
+\begin{itemize}
+\item \textbf{Analogiemethode}
+\begin{itemize}
+\item Vergleiche die zu schätzenden Entwicklungen mit \textbf{bereits abgeschlossenen Produktentwicklungen} anhand von \textbf{Ähnlichkeitskriterien}
+\end{itemize}
+\item \textbf{\textbf{Basismethoden}}
+\begin{itemize}
+\item \textbf{Relationsmethode}
+\begin{itemize}
+\item Methode, die anhand von \textbf{Faktoren} (Programmiersprache/-erfahrung, Dateiorganisation) vergleicht, wie diese den \textbf{Aufwand beeinflussen}: \textbf{Auf- und Abschläge} mit etwa gleich großem, existierenden Produkt
+\end{itemize}
+\item \textbf{Multiplikatormethode}
+\begin{itemize}
+\item \textbf{Zerlegung in Teilprodukte} mit Zuteilung feststehender Aufwände
+					
+$\Rightarrow$ Anzahl Teilprodukte {\Large $\cdot$} Aufwand Kategorie
+\end{itemize}
+\item \textbf{Phasenaufteilung}
+\begin{itemize}
+\item Ermittlung aus abgeschlossenen Entwicklungen werden \textbf{auf einzelne Entwicklungsphasen verteilt} (Kuchendiagramm)
+\end{itemize}
+\end{itemize}
+\item \textbf{COCOMO II}
+\begin{itemize}
+\item {\LARGE $PM = A \cdot (Size)^{1,01 + 0,01 \cdot {\sum_{j=1}^{5} SF_{j}}} \cdot \prod_{i=1}^{17} EM_{i}$}
+\begin{itemize}
+\item $PM$ = Personenmonate
+\item $A$ = Konstante für Kalibrierung des Modells (z.B. LOC)
+\item $Size$ = Geschätzter Umfang der Software in KLOC
+\item $SF_{j}$ = Skalierungsfaktoren
+\item $EM_{i}$ = Multiplikative Kostenfaktoren
+\end{itemize}
+\end{itemize}
+\end{itemize}
