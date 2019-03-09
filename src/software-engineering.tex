@@ -1,9 +1,18 @@
-\input{../sections/vorwort.tex}
+\documentclass[parskip=full, 12pt]{scrartcl}
+
+\usepackage[utf8]{inputenc} 					% Uses UTF8 file encoding for TeX sources
+\usepackage[T1]{fontenc}    					% Avoid garbled Unicode text in PDF
+\usepackage[german]{babel}  					% German hyphenation, quotes, etc
+\usepackage{graphicx}       					% Provides commands for including figures
+\usepackage{color}								% Provides color availability
+\usepackage{tikz}								% Provides Mind-Map functionality
+\usetikzlibrary{mindmap}
+
+% Anmerkung: Dieses Dokument dient anderen Informatikstudenten als inhaltliche Zusammenfassung für den Kurs Softwaretechnik I am Karlsruher Institut für Technologie. Alle Angaben sind ohne Gewähr auf Richtigkeit und Vollständigkeit.
 
 \begin{document}
 
 \begin{titlepage}
-	
 \title{Softwaretechnik I}
 \author{Björn Holtvogt}
 \date{}
@@ -15,7 +24,6 @@
 \begin{center}
 Das Wasserfallmodell als einfaches Grundmodell einer softwaretechnischen Planung:
 \end{center}
-
 \end{titlepage}
 	
 % Inhaltsverzeichnis	
@@ -28,34 +36,26 @@ Das Wasserfallmodell als einfaches Grundmodell einer softwaretechnischen Planung
 \pagestyle{plain}
 \setcounter{page}{1}
 
+% Kapitel
 \input{../sections/planungsphase.tex}
 \newpage
-
 \input{../sections/definitionsphase.tex}
 \newpage
-
 \input{../sections/entwurfsphase.tex}
 \addtocontents{toc}{\protect\newpage} % Seitenumbruch im Inhaltsverzeichnis
-\newpage
-	
+\newpage	
 \input{../sections/implementierungsphase.tex}
 \newpage
-
 \input{../sections/testphase.tex}
 \newpage
-
 \input{../sections/abnahmephase.tex}
 \newpage
-
 \input{../sections/aufwandsschaetzung.tex}	
-\newpage
-	
+\newpage	
 \input{../sections/prozessmodelle.tex}
 \newpage
-
 \input{../sections/werkzeugkette.tex}		
 \newpage
-
 \input{../sections/quellenverzeichnis.tex}
 	
 \end{document}
