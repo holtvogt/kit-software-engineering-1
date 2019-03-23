@@ -1,159 +1,159 @@
 \section{Definitionsphase}
 
-Ziel:
-\begin{itemize}
-\item Erstellung eines \textbf{Pflichtenhefts}, mit Hilfe von \textbf{Objekt}- und \textbf{dynamischen Modellen}
-\end{itemize}
-	
-\subsection{Pflichtenheft}
-	
-\begin{itemize}
-\item  \textbf{Definiert} das zu erstellende System \textbf{vollständig und exakt}
-\begin{itemize}
-\item \underline{Ohne Nachfragen} implementierbar!
-\item Nicht wie, sondern nur \underline{was zu implementieren} ist
-\end{itemize}
-\item Verfeinerung des Lastenhefts
-\end{itemize}
+	Ziel:
+	\begin{itemize}
+		\item Erstellung eines \textbf{Pflichtenhefts}, mit Hilfe von \textbf{Objekt}- und \textbf{dynamischen Modellen}
+	\end{itemize}
 		
-\subsection{Modellarten}
+		\subsection{Pflichtenheft}
+			
+			\begin{itemize}
+				\item  \textbf{Definiert} das zu erstellende System \textbf{vollständig und exakt}
+				\begin{itemize}
+					\item \underline{Ohne Nachfragen} implementierbar!
+					\item Nicht wie, sondern nur \underline{was zu implementieren} ist
+				\end{itemize}
+				\item Verfeinerung des Lastenhefts
+			\end{itemize}
+				
+		\subsection{Modellarten}
+				
+			\begin{itemize}
+				\item Funktionales Modell (aus dem Lastenheft)
+				\begin{itemize}
+					\item Szenarien
+					\item Anwendungsfalldiagramme
+				\end{itemize}
+				\item Objektmodell
+				\begin{itemize}
+					\item Klassendiagramm
+					\item Objektdiagramm
+				\end{itemize}
+				\item Dynamisches Modell
+				\begin{itemize}
+					\item Sequenzdiagramm
+					\item Zustandsdiagramm
+					\item Aktivitätsdiagramm
+				\end{itemize}
+			\end{itemize}
+				
+		\newpage
+		\subsection{Gliederung}
+				
+			\begin{itemize}
+				\item Zielbestimmung 
+				\item Produkeinsatz
+				\item \textbf{\textit{Produktumgebung}}
+				\item Funktionale Anforderungen
+				\item Produktdaten
+				\item Nichtfunktionale Anforderungen
+				\item \textbf{\textit{Globale Testfälle}}
+				\item Systemmodelle
+				\begin{itemize}
+					\item Szenarien
+					\item Anwendungsfälle
+					\item \textbf{\textit{Objektmodelle}}
+					\item \textbf{\textit{Dynamische Modelle}}
+					\item \textbf{\textit{Benutzerschnittstelle - Bildschirmskizze, Navigationspfade}}
+				\end{itemize}
+				\item Glossar
+			\end{itemize}
+				
+		\subsection{Liskov'sches Substitutionsprinzip}
+			
+			\begin{itemize}
+				\item In einem Programm, in dem U eine Unterklasse von K ist, kann \textbf{jedes Exemplar der Klasse K durch ein Exemplar von U ersetzt werden}, wobei das Programm weiterhin \underline{korrekt funktioniert}
+			\end{itemize}
+				
+		\newpage
+		\subsection{Folgerungen aus dem Substitutionsprinzip}
+			
+			\begin{itemize}
+				\item Signaturvererbung
+				\begin{itemize}
+					\item Eine in der Oberklasse definierte und evtl. implementierte Methode überträgt \textbf{nur ihre Signatur} auf die Unterklasse
+				\end{itemize}
+				\item Implementierungsvererbung
+				\begin{itemize}
+					\item Eine in der Oberklasse definierte und implementierte Methode überträgt ihre \textbf{Signatur und ihre Implementierung} auf die Unterklasse
+									
+					$\Rightarrow$ Implementierungsvererbung setzt Signaturvererbung voraus!
+				\end{itemize}
+				\item Anpassung geerbter Eigenschaften
+				\begin{itemize}
+					\item Überladen
+					\begin{itemize}
+						\item Eine geerbte Methode mit gleichem Namen, aber anderer Signatur wird definiert
+					\end{itemize}
+					\item Überschreiben
+					\begin{itemize}
+						\item Eine geerbte, \textbf{dynamische} Methode mit gleichem Namen und gleicher Signatur wird \textbf{neu implementiert}
+					\end{itemize}
+					\item Verdecken
+					\begin{itemize}
+						\item Eine geerbte, \textbf{statische} Methode mit gleichem Namen und gleicher Signatur wird \textbf{neu implementiert}
+					\end{itemize}
+				\end{itemize}
+				\newpage
+				\item Varianz
+				\begin{itemize}
+					\item Definition
+					\begin{itemize}
+						\item Parametermodifikation einer überschriebenen Methode
+					\end{itemize}
+					\item Invarianz
+					\begin{itemize}
+						\item Der Parametertyp wird nicht modifiziert
+					\end{itemize}
+					\item Kovarianz
+					\begin{itemize}
+						\item Der Parametertyp wird spezialisiert
+					\end{itemize}
+					\item Kontravarianz
+					\begin{itemize}
+						\item Der Parametertyp wird allgemeiner
+					\end{itemize}
+				\end{itemize}
+			\end{itemize}
+				
+			\subsubsection{Varianzen gemäß dem Substitutionsprinzip und in Java}
+			
+				\begin{center}
+					\resizebox{\textwidth}{!}{
+					\begin{tabular}{l|c|c|c|c|c|c}
+						                              & \multicolumn{3}{c|}{\textbf{Eingabeparameter}} & \multicolumn{3}{c}{\textbf{Ausgabeparameter} } \\
+						\hline
+						                              & Invarianz                                      & Kovarianz & Kontravarianz & Invarianz & Kovarianz & Kontravarianz \\
+						\hline
+						\textbf{Substitutionsprinzip} & $\surd$                                        &           & $\surd$       & $\surd$   & $\surd$   & \\
+						\hline
+						\textbf{Java}                 & $\surd$                                        &           &               & $\surd$   & $\surd$   & \\
+					\end{tabular}}
+				\end{center}
 		
-\begin{itemize}
-\item Funktionales Modell (aus dem Lastenheft)
-\begin{itemize}
-\item Szenarien
-\item Anwendungsfalldiagramme
-\end{itemize}
-\item Objektmodell
-\begin{itemize}
-\item Klassendiagramm
-\item Objektdiagramm
-\end{itemize}
-\item Dynamisches Modell
-\begin{itemize}
-\item Sequenzdiagramm
-\item Zustandsdiagramm
-\item Aktivitätsdiagramm
-\end{itemize}
-\end{itemize}
-		
-\newpage
-\subsection{Gliederung}
-		
-\begin{itemize}
-\item Zielbestimmung 
-\item Produkeinsatz
-\item \textbf{\textit{Produktumgebung}}
-\item Funktionale Anforderungen
-\item Produktdaten
-\item Nichtfunktionale Anforderungen
-\item \textbf{\textit{Globale Testfälle}}
-\item Systemmodelle
-\begin{itemize}
-\item Szenarien
-\item Anwendungsfälle
-\item \textbf{\textit{Objektmodelle}}
-\item \textbf{\textit{Dynamische Modelle}}
-\item \textbf{\textit{Benutzerschnittstelle - Bildschirmskizze, Navigationspfade}}
-\end{itemize}
-\item Glossar
-\end{itemize}
-		
-\subsection{Liskov'sches Substitutionsprinzip}
-	
-\begin{itemize}
-\item In einem Programm, in dem U eine Unterklasse von K ist, kann \textbf{jedes Exemplar der Klasse K durch ein Exemplar von U ersetzt werden}, wobei das Programm weiterhin \underline{korrekt funktioniert}
-\end{itemize}
-		
-\newpage
-\subsection{Folgerungen aus dem Substitutionsprinzip}
-	
-\begin{itemize}
-\item Signaturvererbung
-\begin{itemize}
-\item Eine in der Oberklasse definierte und evtl. implementierte Methode überträgt \textbf{nur ihre Signatur} auf die Unterklasse
-\end{itemize}
-\item Implementierungsvererbung
-\begin{itemize}
-\item Eine in der Oberklasse definierte und implementierte Methode überträgt ihre \textbf{Signatur und ihre Implementierung} auf die Unterklasse
-					
-$\Rightarrow$ Implementierungsvererbung setzt Signaturvererbung voraus!
-\end{itemize}
-\item Anpassung geerbter Eigenschaften
-\begin{itemize}
-\item Überladen
-\begin{itemize}
-\item Eine geerbte Methode mit gleichem Namen, aber anderer Signatur wird definiert
-\end{itemize}
-\item Überschreiben
-\begin{itemize}
-\item Eine geerbte, \textbf{dynamische} Methode mit gleichem Namen und gleicher Signatur wird \textbf{neu implementiert}
-\end{itemize}
-\item Verdecken
-\begin{itemize}
-\item Eine geerbte, \textbf{statische} Methode mit gleichem Namen und gleicher Signatur wird \textbf{neu implementiert}
-\end{itemize}
-\end{itemize}
-\newpage
-\item Varianz
-\begin{itemize}
-\item Definition
-\begin{itemize}
-\item Parametermodifikation einer überschriebenen Methode
-\end{itemize}
-\item Invarianz
-\begin{itemize}
-\item Der Parametertyp wird nicht modifiziert
-\end{itemize}
-\item Kovarianz
-\begin{itemize}
-\item Der Parametertyp wird spezialisiert
-\end{itemize}
-\item Kontravarianz
-\begin{itemize}
-\item Der Parametertyp wird allgemeiner
-\end{itemize}
-\end{itemize}
-\end{itemize}
-		
-\subsubsection{Varianzen gemäß dem Substitutionsprinzip und in Java}
-
-\begin{center}
-\resizebox{\textwidth}{!}{
-\begin{tabular}{l|c|c|c|c|c|c}
-& \multicolumn{3}{c|}{\textbf{Eingabeparameter}} & \multicolumn{3}{c}{\textbf{Ausgabeparameter} } \\
-\hline
-& Invarianz & Kovarianz & Kontravarianz & Invarianz & Kovarianz & Kontravarianz \\
-\hline
-\textbf{Substitutionsprinzip} & $\surd$ & & $\surd$ & $\surd$ & $\surd$ & \\
-\hline
-\textbf{Java} & $\surd$ & & & $\surd$ & $\surd$ & \\
-\end{tabular}}
-\end{center}
-
-\subsection{Kapselungsprinzip}
-		
-\begin{itemize}
-\item Der \textbf{Zustand} ist zwar nach außen sichtbar, er wird aber \textbf{im Inneren des Objektes verwaltet} (und also nur kontrolliert geändert)
-\end{itemize}
-		
-\subsection{Geheimnisprinzip}
-	
-\begin{itemize}
-\item Jedes Modul verbirgt eine \textbf{wichtige Entwurfsentscheidung} hinter einer \textbf{wohldefinierten Schnittstelle} die sich bei einer Änderung der Entscheidung \underline{nicht} mit ändert
-\begin{itemize}
-\item \underline{Verborgenes und Unbenutztes} kann ohne Risiko geändert werden
-\end{itemize}
-\end{itemize}
-		
-\subsection{Beispiele für Verbergung}
-		
-\begin{itemize}
-\item \textbf{Datenstrukturen} (Wahl, Größe und Implementierung und Operationen an diesen)
-\item \textbf{Maschinennahe Details} (Gerätetreiber, Ein- und Ausgabe)
-\item \textbf{Betriebssystemnahe Details} (Ein- und Ausgabeschnittstellen, Dateiformate, Netzwerkprotokolle)
-\item \textbf{Grundsoftware} (Datenbanken, Oberflächenbibliotheken)
-\item \textbf{Benutzungsschnittstellen} (Kommandoschnittstelle, graphische Oberfläche, Gesten-gesteuerte Oberfläche, Web, Sprachsteuerung, Kombinationen davon,..)
-\item \textbf{\underline{Sprache}} (Text von Dialogen, Beschriftungen)
-\item \textbf{Reihenfolge der Verarbeitung}
-\end{itemize}
+		\subsection{Kapselungsprinzip}
+				
+			\begin{itemize}
+				\item Der \textbf{Zustand} ist zwar nach außen sichtbar, er wird aber \textbf{im Inneren des Objektes verwaltet} (und also nur kontrolliert geändert)
+			\end{itemize}
+				
+		\subsection{Geheimnisprinzip}
+			
+			\begin{itemize}
+				\item Jedes Modul verbirgt eine \textbf{wichtige Entwurfsentscheidung} hinter einer \textbf{wohldefinierten Schnittstelle} die sich bei einer Änderung der Entscheidung \underline{nicht} mit ändert
+				\begin{itemize}
+					\item \underline{Verborgenes und Unbenutztes} kann ohne Risiko geändert werden
+				\end{itemize}
+			\end{itemize}
+				
+		\subsection{Beispiele für Verbergung}
+				
+			\begin{itemize}
+				\item \textbf{Datenstrukturen} (Wahl, Größe und Implementierung und Operationen an diesen)
+				\item \textbf{Maschinennahe Details} (Gerätetreiber, Ein- und Ausgabe)
+				\item \textbf{Betriebssystemnahe Details} (Ein- und Ausgabeschnittstellen, Dateiformate, Netzwerkprotokolle)
+				\item \textbf{Grundsoftware} (Datenbanken, Oberflächenbibliotheken)
+				\item \textbf{Benutzungsschnittstellen} (Kommandoschnittstelle, graphische Oberfläche, Gesten-gesteuerte Oberfläche, Web, Sprachsteuerung, Kombinationen davon,..)
+				\item \textbf{\underline{Sprache}} (Text von Dialogen, Beschriftungen)
+				\item \textbf{Reihenfolge der Verarbeitung}
+			\end{itemize}

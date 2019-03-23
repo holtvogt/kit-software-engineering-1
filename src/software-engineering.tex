@@ -1,59 +1,71 @@
 \documentclass[parskip=full, 12pt]{scrartcl}
 
-\usepackage[utf8]{inputenc} 					% Uses UTF8 file encoding for TeX sources
-\usepackage[T1]{fontenc}    					% Avoid garbled Unicode text in PDF
-\usepackage[german]{babel}  					% German hyphenation, quotes, etc
-\usepackage{graphicx}       					% Provides commands for including figures
+\usepackage[utf8]{inputenc} 			% Uses UTF8 file encoding for TeX sources
+\usepackage[T1]{fontenc}    			% Avoid garbled Unicode text in PDF
+\usepackage[german]{babel}  			% German hyphenation, quotes, etc
+\usepackage{graphicx}       			% Provides commands for including figures
 \usepackage{color}						% Provides color availability
 \usepackage{tikz}						% Provides Mind-Map functionality
 \usetikzlibrary{mindmap}
 
 \begin{document}
 
-\begin{titlepage}
-\title{Softwaretechnik 1}
-\author{Björn Holtvogt}
-\date{}
-\maketitle
-\thispagestyle{empty} % Seitenzahl nicht anzeigen		
-\begin{tikzpicture}[remember picture, overlay]
-\node at (current page.center){\includegraphics[width=1.1\textwidth]{../images/wasserfallmodell.jpg}};	
-\end{tikzpicture}
-\begin{center}
-Das Wasserfallmodell als einfaches Grundmodell einer softwaretechnischen Planung:
-\end{center}
-\end{titlepage}
+	\begin{titlepage}
+		\title{Softwaretechnik 1}
+		\author{Björn Holtvogt}
+		\date{}
+		\maketitle
+		\thispagestyle{empty} % Seitenzahl nicht anzeigen		
+		\begin{tikzpicture}[remember picture, overlay]
+			\node at (current page.center){\includegraphics[width=1.1\textwidth]{../images/wasserfallmodell.jpg}};	
+		\end{tikzpicture}
+		\begin{center}
+			Das Wasserfallmodell als einfaches Grundmodell einer softwaretechnischen Planung:
+		\end{center}
+	\end{titlepage}
+		
+	% Inhaltsverzeichnis
+		
+	% Seitenzahlen im Inhaltsverzeichnis nicht anzeigen
+	\newpage
+	\pagestyle{empty}
+	\tableofcontents	
+	% Seitenzahlen beginnen wieder bei 1
+	\newpage
+	\pagestyle{plain}
+	\setcounter{page}{1}
 	
-% Inhaltsverzeichnis	
-% Seitenzahlen im Inhaltsverzeichnis nicht anzeigen
-\newpage
-\pagestyle{empty}
-\tableofcontents	
-% Seitenzahlen beginnen wieder bei 1
-\newpage
-\pagestyle{plain}
-\setcounter{page}{1}
-
-% Kapitel
-\input{../sections/planungsphase.tex}
-\newpage
-\input{../sections/definitionsphase.tex}
-\newpage
-\input{../sections/entwurfsphase.tex}
-\addtocontents{toc}{\protect\newpage} % Seitenumbruch im Inhaltsverzeichnis
-\newpage	
-\input{../sections/implementierungsphase.tex}
-\newpage
-\input{../sections/testphase.tex}
-\newpage
-\input{../sections/abnahmephase.tex}
-\newpage
-\input{../sections/aufwandsschaetzung.tex}	
-\newpage	
-\input{../sections/prozessmodelle.tex}
-\newpage
-\input{../sections/werkzeugkette.tex}		
-\newpage
-\input{../sections/quellenverzeichnis.tex}
+	% Kapitel
+	
+	\input{../sections/planungsphase.tex}
+	\newpage
+	
+	\input{../sections/definitionsphase.tex}
+	\newpage
+	
+	\input{../sections/entwurfsphase.tex}
+	% Seitenumbruch im Inhaltsverzeichnis
+	\addtocontents{toc}{\protect\newpage} 
+	\newpage
+		
+	\input{../sections/implementierungsphase.tex}
+	\newpage
+	
+	\input{../sections/testphase.tex}
+	\newpage
+	
+	\input{../sections/abnahmephase.tex}
+	\newpage
+	
+	\input{../sections/aufwandsschaetzung.tex}	
+	\newpage
+		
+	\input{../sections/prozessmodelle.tex}
+	\newpage
+	
+	\input{../sections/werkzeugkette.tex}		
+	\newpage
+	
+	\input{../sections/quellenverzeichnis.tex}
 	
 \end{document}
