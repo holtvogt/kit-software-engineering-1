@@ -1,13 +1,13 @@
 \documentclass[parskip=full, 12pt]{scrartcl}
 
-\usepackage[utf8]{inputenc} 			% Uses UTF8 file encoding for TeX sources
-\usepackage[T1]{fontenc}    			% Avoid garbled Unicode text in PDF
-\usepackage[german]{babel}  			% German hyphenation, quotes, etc
-\usepackage{graphicx}       			% Provides commands for including figures
-\usepackage{color}						% Provides color availability
-\usepackage{tikz}						% Provides Mind-Map functionality
+\usepackage[utf8]{inputenc} 	% Uses UTF8 file encoding for TeX sources
+\usepackage[T1]{fontenc}    	% Avoid garbled Unicode text in PDF
+\usepackage[german]{babel}  	% German hyphenation, quotes, etc
+\usepackage{graphicx}       	% Provides commands for including figures
+\usepackage{color}				% Provides color availability
+\usepackage{tikz}				% Provides Mind-Map functionality
 \usetikzlibrary{mindmap}
-\usepackage{hyperref} % hyperref has to be the last import.
+\usepackage{hyperref}			% hyperref has to be the last import
 
 \begin{document}
 
@@ -16,7 +16,8 @@
 		\author{Björn Holtvogt}
 		\date{}
 		\maketitle
-		\thispagestyle{empty} % Seitenzahl nicht anzeigen		
+		 % Do not display page number
+		\thispagestyle{empty}
 		\begin{tikzpicture}[remember picture, overlay]
 			\node at (current page.center){\includegraphics[width=1.1\textwidth]{../resources/images/wasserfallmodell.jpg}};	
 		\end{tikzpicture}
@@ -25,18 +26,16 @@
 		\end{center}
 	\end{titlepage}
 		
-	% Inhaltsverzeichnis
+	% Table of contents
 		
-	% Seitenzahlen im Inhaltsverzeichnis nicht anzeigen
+	% Do not display page numbers on table of contents
 	\newpage
 	\pagestyle{empty}
 	\tableofcontents	
-	% Seitenzahlen beginnen wieder bei 1
+	% Page number starts with 1
 	\newpage
 	\pagestyle{plain}
 	\setcounter{page}{1}
-	
-	% Kapitel
 	
 	\input{sections/planungsphase.tex}
 	\newpage
@@ -45,7 +44,8 @@
 	\newpage
 	
 	\input{sections/entwurfsphase.tex}
-	% Seitenumbruch im Inhaltsverzeichnis
+	
+	% Page break in the table of contents
 	\addtocontents{toc}{\protect\newpage} 
 	\newpage
 		
@@ -64,9 +64,6 @@
 	\input{sections/prozessmodelle.tex}
 	\newpage
 	
-	\input{sections/werkzeugkette.tex}		
-	\newpage
-	
-	\input{sections/quellenverzeichnis.tex}
+	\input{sections/werkzeugkette.tex}
 	
 \end{document}
