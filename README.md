@@ -16,6 +16,6 @@ Des Weiteren wird noch auf die Aufwandsschätzung, verschiedene Prozessmodelle u
 * Werkzeugkette und Versionskontrolle
 
 ## Sonstiges
-Die Zusammenfassung wurde von mir damals während der Klausurvorbereitung erstellt. Demnach enthält die Zusammenfassung, wie der Name schon sagt, nur die von mir als
+Die Zusammenfassung wurde von mir damals während der Klausurvorbereitung erstellt. Demnach enthält die Zusammenfassung nur die von mir als
 notwendig erachteten Informationen zur Vorbereitung auf die schriftliche Klausur für den Kurs Softwaretechnik 1 (und eventuell etwas mehr).
 Falls euch Fehler auffallen oder wenn ihr Verbesserungsvorschläge habt, könnt ihr gerne einen Pull request erstellen.
