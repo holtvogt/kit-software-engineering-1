@@ -2,8 +2,8 @@
 Diese Zusammenfassung dient zur Klausurvorbereitung für den Kurs Softwaretechnik 1 für Studierende des Karlsruher Instituts für Technologie.
 
 ## Inhalt
-Inhalt der Zusammenfassung sind unter anderem die ersten sechs Phasen des Wasserfallmodelles zur Entwicklung eines Softwareproduktes.
-Des Weiteren wird noch auf die Aufwandsschätzung, verschiedene Prozessmodelle und zum Schluss noch auf die Werkzeugkette und die Versionskontrolle eingegangen.
+Inhalt der Zusammenfassung sind unter anderem die ersten sechs Phasen des Wasserfallmodelles zur Entwicklung eines Softwareprodukts.
+Des Weiteren wird noch auf die Aufwandsschätzung, verschiedene Prozessmodelle, die Werkzeugkette und die Versionskontrolle eingegangen.
 
 * Planungsphase
 * Definitionsphase
