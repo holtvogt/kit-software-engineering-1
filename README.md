@@ -18,4 +18,4 @@ Des Weiteren wird noch auf die Aufwandsschätzung, verschiedene Prozessmodelle, 
 ## Sonstiges
 Die Zusammenfassung wurde von mir damals während der Klausurvorbereitung erstellt. Demnach enthält die Zusammenfassung nur die von mir als
 notwendig erachteten Informationen zur Vorbereitung auf die schriftliche Klausur für den Kurs Softwaretechnik 1 (und eventuell etwas mehr).
-Falls euch Fehler auffallen oder wenn ihr Verbesserungsvorschläge habt, könnt ihr gerne einen Pull request erstellen.
+Falls euch Fehler auffallen oder wenn ihr Verbesserungsvorschläge habt, könnt ihr gerne einen [_Pull request_](https://github.com/Bjoern1610/kit-software-engineering-1/pulls) erstellen.
